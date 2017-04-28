@@ -5,8 +5,8 @@ MAINTAINER Toni Hermoso Pulido <toniher@cau.cat>
 # Adapted from https://github.com/klaemo/docker-couchdb-lucene/blob/master/Dockerfile
 
 ARG COUCHDB_LUCENE_VERSION=2.0.0
-ARG COUCHDB_PORT=5984
-ARG COUCHDB_SERVER=couchdb
+ENV COUCHDB_PORT 5984
+ENV COUCHDB_SERVER couchdb
 
 RUN groupadd -r couchdb && useradd -d /opt/couchdb-lucene -g couchdb couchdb
 
@@ -25,8 +25,5 @@ RUN chmod +x /opt/couchdb-lucene/run-lucene.sh
 WORKDIR /opt/couchdb-lucene
 EXPOSE 5985
 VOLUME ["/opt/couchdb-lucene/indexes"]
-
-ENV COUCHDB_SERVER $COUCHDB_SERVER
-ENV COUCHDB_PORT $COUCHDB_PORT
 
 ENTRYPOINT ["./run-lucene.sh"]
