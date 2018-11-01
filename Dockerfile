@@ -4,7 +4,7 @@ FROM maven:3-jdk-11
 MAINTAINER Toni Hermoso Pulido <toniher@cau.cat>
 # Adapted from https://github.com/klaemo/docker-couchdb-lucene/blob/master/Dockerfile
 
-ARG COUCHDB_LUCENE_VERSION=2.0.0
+ARG COUCHDB_LUCENE_VERSION=2.1.0
 ENV COUCHDB_PORT 5984
 ENV COUCHDB_SERVER couchdb
 
