@@ -1,4 +1,4 @@
-FROM maven:3-jdk-8
+FROM maven:3-jdk-11
 
 # File Author / Maintainer
 MAINTAINER Toni Hermoso Pulido <toniher@cau.cat>
